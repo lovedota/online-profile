@@ -1,0 +1,25 @@
+<div id="{{id}}" class="carousel slide" data-ride="carousel" data-bind="if: items().length > 0">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" data-bind="foreach: items">
+        <li data-target="#{{$parent.id}}" data-slide-to="{{$index}}" data-bind="css: {'active': $index() === 0}"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" data-bind="template: {foreach: items, afterRender: initCarousel}">
+        <div class="item" data-bind="css: {'active': $index() === 0}">
+            <img data-bind="attr: {src: imageUrl, alt: title}">
+            <div class="carousel-caption" data-bind="style: {color: $parent.options.captionColor}" style="display: none">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#{{id}}" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#{{id}}" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>

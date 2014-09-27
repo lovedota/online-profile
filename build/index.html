@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Online Profile</title>
+
+    <link rel="apple-touch-startup-image" href="css/images/ios-startup-image-landscape.png" media="(orientation:landscape)" />
+    <link rel="apple-touch-startup-image" href="css/images/ios-startup-image-portrait.png" media="(orientation:portrait)" />
+    <link rel="apple-touch-icon" href="css/images/icon.png"/>
+
+    <!--Durandal does not require Bootstrap or Font Awesome.
+        They are used to make the samples look nice.-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+
+    <!--The css in this file makes the modal dialogs work right.-->
+    <link rel="stylesheet" href="css/durandal.css" type="text/css"/>
+
+    <!--Css specific to the samples.-->
+    <link rel="stylesheet" href="css/samples.css" type="text/css"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+<div id="applicationHost">
+    <div class="splash">
+        <div class="message">
+            My Online Profile
+        </div>
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/require.js" data-main="/app/main"></script>
+</body>
+</html>

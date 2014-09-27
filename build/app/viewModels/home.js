@@ -1,0 +1,1 @@
+define(["durandal/app","durandal/system","knockout","data"],function(e,t,n,i){var r=n.utils.arrayFirst(i,function(e){return"ngocdung"===e.id}),o={profile:n.observable(r)};return o});

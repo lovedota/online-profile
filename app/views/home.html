@@ -1,0 +1,91 @@
+<div class="page-host">
+    <div class="row well">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body" data-bind="with: profile">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8">
+                            <h2>{{firstName + " " + middleName + " " + lastName}}</h2>
+
+                            <p><strong>Birthday: </strong> 21/02/1988 </p>
+
+                            <p><strong>Address: </strong> 482/12/19 Le Quang Dinh, Ward 11, District Binh Thanh, Vietnam
+                            </p>
+
+                            <p><strong>Phone: </strong> 0902.428.521 </p>
+
+                            <p><strong>Email: </strong> <a href="mailto:lovedota21@gmail.com">lovedota21@gmail.com</a>
+                            </p>
+
+                            <p><strong>Hobbies: </strong> Kicking Shuttle Cock, BreakDance, Football</p>
+
+                            <p><strong>Education: </strong> 20/07/2010: Graduated Vanlang University at Department of
+                                Software Engineer.</p>
+
+                            <p><strong>Community Involvement : </strong></p>
+                            <ul>
+                                <li>Volunteer for hard project and concentration required.</li>
+                                <li>Looking for the best performance of coding and art of programming.</li>
+                            </ul>
+                            <p><strong>Personality: </strong></p>
+                            <ul>
+                                <li>Always looking forward to the best way, so always debating.</li>
+                                <li>Love the truth.</li>
+                                <li>Interested at discussing in Programming Forum and Learning new skills.</li>
+                            </ul>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-6 col-sm-3 text-center">
+                            <img data-bind="attr: {src: photoUrl}" alt=""
+                                 class="center-block img-circle img-responsive">
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/panel-body-->
+            </div>
+            <!--/panel-->
+
+
+        </div>
+
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-body" data-bind="with: profile">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p><strong>CAREER OBJECTIVE</strong></p>
+                            <ul>
+                                <li>Developer</li>
+                                <li>Web Developer</li>
+                                <li>Web Front-End Developer</li>
+                                <li>Team Leader</li>
+                                <li>Technique Developer</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12">
+                            <p><strong>SKILLS</strong></p>
+
+                            <div class="col-md-5">
+                                <ul data-bind="foreach: skills.frontend">
+                                    <li><span class="label label-info tags">{{$data}}</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5">
+                                <ul data-bind="foreach: skills.backend">
+                                    <li><span class="label label-info tags">{{$data}}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/panel-body-->
+            </div>
+            <!--/panel-->
+
+
+        </div>
+    </div>
+</div>

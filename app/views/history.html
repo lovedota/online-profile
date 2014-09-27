@@ -1,0 +1,51 @@
+<div id="period-panel" class="period-panel-wrapper navbar-fixed-top" data-bind="with: profile" style="top: 50px; background-color: #5cb85c">
+    <ul class="list-group list-inline text-center" data-bind="foreach: history.periods" style="margin: 0">
+        <li style="cursor: pointer"
+            class="list-group-item {{id === $root.activePeriodId() ? 'list-group-item-info' : ''}}"
+            data-bind="click: $root.changePeriod">
+            <h5 class="list-group-item-heading">{{startDate | date: "MM/YYYY"}} - {{endDate | date:
+                "MM/YYYY"}}</h5>
+
+            <p class="list-group-item-text">{{title}}</p>
+        </li>
+    </ul>
+</div>
+
+<div id="history-page-host" class="page-host" data-bind="with: profile" style="top: 133px">
+    <div class="col-md-12" style="padding: 0; background-color: #4FD2E4">
+        <div id="timeline-wrapper">
+            <ul class="timeline" data-bind="foreach: history.details">
+                <li id="timeline-id-{{id}}" class="time-label">
+                    <span class="bg-light-blue">{{endDate | date: "MMM YYYY"}}</span>
+                </li>
+                <!-- ko foreach: contents -->
+                <li>
+                    <i class="fa fa-user bg-blue"></i>
+
+                    <div class="timeline-item">
+                        <span class="time"><i class="fa fa-clock-o"></i> {{startDate | date: "MM/DD/YYYY"}}</span>
+
+                        <h3 class="timeline-header">{{title}}</h3>
+
+                        <div class="timeline-body">
+                            <div data-bind="html: description"></div>
+                            <slide-show params="items: screenshots, options: slideshowOptions"></slide-show>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- /ko -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="myModal" class="modal hide fade">
+    <div id="printThis">
+        <div class="modal-body">
+            <img src="//placehold.it/200x150/DD2222" id="print-img">
+        </div>
+    </div>
+</section>
+
+
